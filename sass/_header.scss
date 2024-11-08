@@ -1,0 +1,148 @@
+@import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+
+@mixin header-styles {
+  display: flex;
+  width: 100%;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #bbdcfc;
+  font-size: 18px;
+  
+  align-items: center;
+  justify-content: space-around;
+
+  .logo a {
+      font-size: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: #2a5096;          
+  }
+
+  .header-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+        .main-navigation {
+            display: flex ;           
+            gap: 1rem;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        
+    
+            .btn-register-news {
+             display: flex;
+             gap: 1rem;
+             padding: 1.5rem;
+             height: 3rem;
+             align-items: center;
+             justify-content: center;
+            
+             background-color:#2a5096; ;
+             border: none;
+             border-radius: 2rem;
+
+             color: #fff;
+             text-align: center;
+             font-weight: bold;
+             font-size: 1rem;
+             text-decoration: none;
+
+             cursor: pointer;            
+
+             &:hover {
+                background-color:  #2689f2;
+                border: 1px solid #58a3f3;
+            }
+        }
+
+            .btn-register-category {
+             display: flex;
+             gap: 1rem;
+             padding: 1rem;
+             height: 3rem;
+             align-items: center;
+             justify-content: center;
+        
+             background-color: #2a5096;
+             border: none;
+             border-radius: 2rem;
+
+             color: #fff;
+             text-align: center;
+             font-weight: bold;
+             font-size: 1rem;
+
+             text-decoration: none;
+
+             cursor: pointer;            
+
+              &:hover {
+              background-color:  #2689f2;
+              border: 1px solid #58a3f3;
+             }
+            }
+        }
+    }
+
+  .search-form {
+    
+    .input-group {
+      flex-grow: 1;
+      width: 400px;
+      padding: 0 1rem;
+      background-color: #5482d2;
+      border: 1px solid #1285f7;  
+      border-radius: 1rem;     
+       
+        .form-control {
+            background-color: transparent;   
+            border: none;  
+            color: #fff;   
+
+            &::placeholder {
+                color: #fff;   
+                text-align: left;                     
+            }
+
+            &:focus {
+                box-shadow: none;
+                border: none;
+            }
+        }       
+        
+
+        button {
+            background: transparent;
+            border: none;
+
+                i {
+                    width: 2rem;
+                    height: 2rem;
+                    color: white;
+                }
+        }
+  
+    }
+  }
+
+
+  @media (max-width: 948px) {
+    flex-direction: column;
+    gap: 2rem;
+
+        .header-buttons {
+          flex-direction: column;       
+        }
+
+        .search-form {    
+            .input-group {
+             max-width: 200px;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,58 @@
+@mixin footer-styles {
+  display: flex; 
+  width: 100%;
+  padding: 2rem;
+  background-color: #034a91c4;
+  align-items: center;
+  justify-content: space-between;  
+
+  p {
+    margin: 0;
+    color: #f5f5dc;
+    text-align: center;
+    font-size: 1rem;
+  }
+  @media (max-width: 768px) { 
+    gap: 1rem;
+    color: #adadae;
+  }
+}
+
+.page-name {
+  font-size: 1.2rem;
+  color: #f5f5dc;
+  text-align: center;
+  font-weight: bold;
+}
+
+.dev-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  color: #f5f5dc;
+
+  a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    color: #f5f5dc;
+   
+    &:hover {
+    color: #002d5b;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .page-name {
+    display: none;
+    appearance: none;
+  }
+  .dev-info {
+    flex-direction: row; 
+    text-align: center;
+    font-size: 1rem; 
+  }
+}

@@ -1,0 +1,39 @@
+@use 'header' as h;
+@use 'footer' as f;
+@use 'main' as m;
+@use 'single' as s;
+@use 'newpost' as np;
+@use 'new-category' as nc;
+
+html {
+  margin: 0 !important;
+}
+
+body { 
+  background-color: #ececec;
+}
+
+.page-header {
+  @include h.header-styles;
+}
+
+.page-footer {
+  @include f.footer-styles;
+}
+
+.main-content {
+  @include m.main-styles;
+}
+
+
+.single-post {
+  @include s.single-styles;
+}
+
+.page-newpost {
+  @include np.newpost-styles;
+}
+
+.page-new-category {
+  @include nc.new-category-styles;
+}
